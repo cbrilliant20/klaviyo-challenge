@@ -1,7 +1,14 @@
+//
 const DOMAIN = `https://api.openweathermap.org/data/2.5/weather?`
 const API_KEY = `&APPID=10d288b61704a5239e53beef7ef992cb`
 const UNIT = `&units=imperial`
 const MOUNTAIN = "stratton"
+
+const email = document.querySelector("#email")
+const phone = document.querySelector("#phone")
+const name = document.querySelector("#name")
+const offer = document.querySelector("#offer")
+const btn = document.querySelector("#btn")
 
 // Requesting latest weather data from OpenWeatherAPI
 function getWeather() {
@@ -18,7 +25,7 @@ function getWeather() {
     .catch((error) => console.error(error))
 }
 
-//  Creating Customer profiles with email/SMS opt in.
+//  Creating Customer profiles with offers opt in.
 function createProfile(e) {
   let profileData = `{
     "token": "UNna9N",
