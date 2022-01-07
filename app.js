@@ -35,4 +35,27 @@ function createProfile(e) {
       "name":"${yourName.value}",
       "offers":"${offers.value}",
   }}`
+  // Passing object to postProfileData
+  postProfileData(profileData)
 }
+
+// Post request to Klaviyo identify API per the docs. Sending profileData as parameter from createProfile function
+function postProfileData(profileData) {
+  const options = {
+    method: "POST",
+    headers: {
+      Accept: "text/html",
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      data: profileData,
+    }),
+  }
+  fetch("https://a.klaviyo.com/api/identify", options)
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err))
+}
+
+// EVENT LISTENERS -  Calling createProfile on click.
+btn.addEventListener("click", createProfile)
