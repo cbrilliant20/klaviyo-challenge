@@ -53,21 +53,21 @@ function generateTrails(min, max) {
 }
 
 // Post request to Klaviyo identify API per the docs. Sending weatherData as parameter from weatherProfile function
-function postWeatherData(weatherData) {
-  // console.log(weatherData)
-  const options = {
-    method: "POST",
-    headers: {
-      Accept: "text/html",
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      data: weatherData,
-    }),
-  }
+// function postWeatherData(weatherData) {
+//   // console.log(weatherData)
+//   const options = {
+//     method: "POST",
+//     headers: {
+//       Accept: "text/html",
+//       "Content-Type": "application/x-www-form-urlencoded",
+//     },
+//     body: new URLSearchParams({
+//       data: weatherData,
+//     }),
+//   }
 
-  fetch("https://a.klaviyo.com/api/identify", options)
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((error) => console.error(error))
-}
+//   fetch("https://a.klaviyo.com/api/identify", options)
+//     .then((response) => response.json())
+//     .then((response) => console.log(response))
+//     .catch((error) => console.error(error))
+// }

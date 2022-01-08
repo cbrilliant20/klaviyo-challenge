@@ -3,6 +3,7 @@ const phone = document.querySelector("#phone")
 const yourName = document.querySelector("#name")
 const btn = document.querySelector("#btn")
 const formContainer = document.querySelector(".form-container")
+const confirmMessage = document.querySelector(".confirm-message")
 
 //  Creating Customer profiles with offers opt in.
 function createProfile(e) {
@@ -12,11 +13,14 @@ function createProfile(e) {
     "properties": {
       "$email":"${email.value}",
       "$phone_number":"${phone.value}",
-      "name":"${yourName.value}"
+      "name":"${yourName.value}",
+      "optIn":"true"
   }}`
   // Passing object to postProfileData
   postProfileData(profileData)
   formContainer.classList.add("hidden")
+  confirmMessage.classList.add("active")
+  confirmMessage.classList.remove("confirm-message")
 }
 
 // Post request to Klaviyo identify API per the docs. Sending profileData as parameter from createProfile function
