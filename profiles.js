@@ -25,9 +25,6 @@ function createProfile(e) {
   }}`
   // Passing object to postProfileData
   postProfileData(profileData)
-  formContainer.classList.add("hidden")
-  confirmMessage.classList.add("active")
-  confirmMessage.classList.toggle("confirm-message")
 }
 
 // Post request to Klaviyo identify API per the docs. Sending profileData as parameter from createProfile function
@@ -49,8 +46,7 @@ function postProfileData(profileData) {
     .catch((error) => console.error(error))
 }
 
-
-// Swapping the value of the opt in property if checkbox is checked.
+// Swapping the value of the opt in property if box is checked.
 function swapOptValue(e) {
   e.preventDefault()
   if (opt.checked) {
@@ -60,6 +56,6 @@ function swapOptValue(e) {
   }
 }
 
-// EVENT LISTENERS 
+// EVENT LISTENERS
 btn.addEventListener("click", createProfile)
 opt.addEventListener("change", swapOptValue)
