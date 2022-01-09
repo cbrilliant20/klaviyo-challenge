@@ -14,15 +14,16 @@ console.log(opt.value)
 function createProfile(e) {
   e.preventDefault()
   let profileData = `{
-    "token": ${PUBLIC_API_KEY},
+    "token": "UNna9N",
     "properties": {
       "$email":"${email.value}",
       "$phone_number":"${phone.value}",
       "name":"${yourName.value}",
       "qty":"${qty.value}",
       "day":"${day.value}",
-      "opt":"${opt.value}",
+      "opt":"${opt.value}"
   }}`
+
   // Passing object to postProfileData
   postProfileData(profileData)
 }
