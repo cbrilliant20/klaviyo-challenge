@@ -7,6 +7,7 @@
 body {
   background: #e8ebf0;
 }
+
 header {
   font-size: 4rem;
   background: white;
@@ -15,12 +16,12 @@ header {
 }
 
 .form-container {
-  position: absolute;
+  /* position: absolute;
   margin: auto;
   top: 0;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,4 +81,22 @@ form * {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  margin: 8rem auto;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  margin: 1rem 0;
+  padding: 1rem;
 }

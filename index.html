@@ -9,12 +9,14 @@
   </head>
   <body>
     <header>The Stratton Report</header>
-    <div class="confirm-message">
+    <!-- <div class="confirm-message">
       <h3>
         Thanks for signing up! Check your email tomorrow morning for the latest
         conditions and trail availability at Stratton Mountain!
-      </h3>
+      </h3> -->
     </div>
+<main>
+    <!-- FORM  -->
     <div class="form-container">
       <h2>Buy Lift Tickets</h2>
       <form action="">
@@ -37,6 +39,37 @@
         <button id="btn">Buy Now</button>
       </form>
     </div>
+
+    <!-- CURRENT WEATHER -->
+    <div class="weather-container">
+      <h2>Today's Highlights</h2>
+      <div class="card">
+        <p>Current</p>
+        <p id="temp"></p>
+      </div>
+      <div class="card">
+        <p>Feels Like</p>
+        <p id="feels-like"></p>
+      </div>
+      <div class="card">
+        <p>Humidity</p>
+        <p id="humidity"></p>
+      </div>
+      <div class="card">
+        <p>Wind</p>
+        <p id="wind"></p>
+      </div>
+      <div class="card">
+        <p>Visibility</p>
+        <p id="visibility"></p>
+      </div>
+      <div class="card">
+        <p>Open Trails</p>
+        <p id="trails"></p>
+      </div>
+    </div>
+
+</main>
     <script src="./profiles.js"></script>
     <script src="./weather.js"></script>
     <script
