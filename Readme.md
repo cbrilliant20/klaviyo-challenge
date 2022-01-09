@@ -16,6 +16,7 @@ When a ticket is purchased, the user has the opportunity to enter in various dat
 1.  User authentication
 2.  Ability to track multiple days per user (I.e bought tickets for friday and saturday)
 3.  Build custom API to further customize the data feed into the Klaviyo platform.
+4.  Form validation
 
 # Technologies
 
@@ -32,11 +33,12 @@ The tech stack chosen was meant to keep this application as simple as possible. 
 1. Email
 2. Phone Number
 3. Name
-4. Ticket Quantity (qty)
-5. Date of ticket (day)
-6. Email/SMS opt in (opt)
+4. Ticket Quantity (ticketQty)
+5. Date of ticket (skiDate)
+6. Email/SMS opt in (optStatus)
 
 # How to use the data in Klaviyo
 
 1.  There are two sources of incoming data to your Klaviyo account, profiles created on the front-end through the form, and the weather data feed.
-2.  A custom flow has been created to allow a Klaviyo admin to simply select all users who have opted in to the Stratton Report to be notified of the current weather on the morning of their lift ticket date.
+2.  A custom flow has been created to allow a Klaviyo admin to automatically add all users who have opted in (opt = true) to the Stratton Report to be notified of the current weather on the morning of their lift ticket date.
+3.  The data feed api call should be modified to represent the correct location if that needs to be changed from Stratton.

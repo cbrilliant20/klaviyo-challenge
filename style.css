@@ -137,6 +137,8 @@ input {
 }
 
 .active {
+  position: absolute;
+  bottom: 3%;
   width: fit-content;
   margin: 0 auto;
   text-align: center;
@@ -145,6 +147,7 @@ input {
   border-radius: 0.5rem;
   padding: 1rem;
   animation: fadeOut 10s;
+  z-index: 100;
 }
 
 #btn:hover {

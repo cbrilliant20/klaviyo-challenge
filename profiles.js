@@ -18,9 +18,9 @@ function createProfile(e) {
       "$email":"${email.value}",
       "$phone_number":"${phone.value}",
       "name":"${yourName.value}",
-      "qty":"${qty.value}",
-      "day":"${day.value}",
-      "opt":"${opt.value}"
+      "ticketQty":"${qty.value}",
+      "skiDay":"${day.value}",
+      "optStatus":"${opt.value}"
   }}`
 
   // Passing object to postProfileData
