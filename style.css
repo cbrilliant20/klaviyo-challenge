@@ -26,6 +26,7 @@ header {
 header img {
   width: 150px;
 }
+
 main {
   display: flex;
   align-items: flex-start;
@@ -33,7 +34,7 @@ main {
   flex-wrap: wrap;
   height: 100vh;
   width: 100%;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .form-container {
@@ -124,6 +125,7 @@ input {
   height: 25px;
   text-align: center;
   cursor: pointer;
+  margin: 0.5rem 0;
 }
 
 .opt-container {
@@ -136,7 +138,7 @@ input {
   padding: 1rem;
   width: 300px;
   border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 #opt {
@@ -151,16 +153,19 @@ input {
 
 .active {
   position: absolute;
-  bottom: 3%;
+  top: 50%;
   width: fit-content;
   margin: 0 auto;
   text-align: center;
   font-size: 2rem;
-  background: white;
+  background: rgb(194, 253, 179);
   border-radius: 0.5rem;
   padding: 1rem;
-  animation: fadeOut 10s;
-  z-index: 100;
+  animation: fadeOut 3.5s;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  color: rgb(56, 54, 54);
+  opacity: 0;
+  pointer-events: none;
 }
 
 #btn:hover {
@@ -169,7 +174,7 @@ input {
 }
 
 @keyframes fadeOut {
-  0% {
+  5% {
     opacity: 1;
   }
   50% {
