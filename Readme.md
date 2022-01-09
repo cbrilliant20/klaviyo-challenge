@@ -16,7 +16,7 @@ When a ticket is purchased, the user has the opportunity to enter in various dat
 1.  User authentication
 2.  Ability to track multiple days per user (I.e bought tickets for friday and saturday)
 3.  Build custom API to further customize the data feed into the Klaviyo platform.
-4.  Form validation
+4.  Klaviyo Forms
 
 # Technologies
 

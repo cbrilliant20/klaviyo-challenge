@@ -1,5 +1,7 @@
+import { WEATHER_API_KEY } from "./config"
+
 const DOMAIN = `https://api.openweathermap.org/data/2.5/weather?`
-const API_KEY = `&APPID=10d288b61704a5239e53beef7ef992cb`
+const API_KEY = WEATHER_API_KEY
 const UNIT = `&units=imperial`
 const MOUNTAIN = "stratton"
 let temp = document.querySelector("#temp")
