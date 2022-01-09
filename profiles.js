@@ -52,9 +52,9 @@ function postProfileData(profileData) {
 function swapOptValue(e) {
   e.preventDefault()
   if (opt.checked) {
-    opt.setAttribute("value", "1")
+    opt.setAttribute("value", "true")
   } else {
-    opt.setAttribute("value", "0")
+    opt.setAttribute("value", "false")
   }
 }
 
