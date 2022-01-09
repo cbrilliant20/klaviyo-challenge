@@ -7,9 +7,8 @@ const day = document.querySelector("#day")
 const opt = document.querySelector("#opt")
 const btn = document.querySelector("#btn")
 const formContainer = document.querySelector(".form-container")
-const confirmMessage = document.querySelector(".confirm-message")
+const confirmMessage = document.querySelector(".confirm-container")
 
-console.log(opt.value)
 //  Creating Customer profiles with offers opt in.
 function createProfile(e) {
   e.preventDefault()
@@ -26,6 +25,8 @@ function createProfile(e) {
 
   // Passing object to postProfileData
   postProfileData(profileData)
+  confirmMessage.classList.add("active")
+  confirmMessage.classList.remove("hidden")
 }
 
 // Post request to Klaviyo identify API per the docs. Sending profileData as parameter from createProfile function

@@ -34,7 +34,7 @@ function currentWeather(data) {
   let currentTempCalc = Math.round(data.main.temp)
   let feelsLikeCalc = Math.round(data.main.feels_like)
   let visibilityCalc = Math.round(data.visibility / 1609)
-
+  // Rendering weather data
   temp.innerHTML = currentTempCalc + "℉"
   feelsLike.innerHTML = feelsLikeCalc + "℉"
   humidity.innerHTML = data.main.humidity + "%"
