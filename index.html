@@ -9,11 +9,7 @@
   </head>
   <body>
     <header>The Stratton Report</header>
-    <!-- <div class="confirm-message">
-      <h3>
-        Thanks for signing up! Check your email tomorrow morning for the latest
-        conditions and trail availability at Stratton Mountain!
-      </h3> -->
+
     </div>
 <main>
     <!-- FORM  -->
@@ -32,8 +28,6 @@
         <input type="date" id="day" name="day" />
         <div class="opt-container">
           <label for="opt">Daily Weather Updates</label>
-          <!-- <input type="checkbox" id="opt" name="opt" /> -->
-          <!-- <input name="opt" id="opt" type="hidden" value="0" /> -->
           <input name="opt" id="opt" type="checkbox" value="0" />
         </div>
         <button id="btn">Buy Now</button>
@@ -43,6 +37,7 @@
     <!-- CURRENT WEATHER -->
     <div class="weather-container">
       <h2>Today's Highlights</h2>
+      <div class="card-conainter">
       <div class="card">
         <p>Current</p>
         <p id="temp"></p>
@@ -64,8 +59,9 @@
         <p id="visibility"></p>
       </div>
       <div class="card">
-        <p>Open Trails</p>
+        <p>Trails</p>
         <p id="trails"></p>
+      </div>
       </div>
     </div>
 
