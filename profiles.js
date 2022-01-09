@@ -1,26 +1,33 @@
+const PUBLIC_API_KEY = "UNna9N"
 const email = document.querySelector("#email")
 const phone = document.querySelector("#phone")
 const yourName = document.querySelector("#name")
+const qty = document.querySelector("#qty")
+const day = document.querySelector("#day")
+const opt = document.querySelector("#opt")
 const btn = document.querySelector("#btn")
 const formContainer = document.querySelector(".form-container")
 const confirmMessage = document.querySelector(".confirm-message")
 
+console.log(opt.value)
 //  Creating Customer profiles with offers opt in.
 function createProfile(e) {
   e.preventDefault()
   let profileData = `{
-    "token": "UNna9N",
+    "token": ${PUBLIC_API_KEY},
     "properties": {
       "$email":"${email.value}",
       "$phone_number":"${phone.value}",
       "name":"${yourName.value}",
-      "optIn":"true"
+      "qty":"${qty.value}",
+      "day":"${day.value}",
+      "opt":"${opt.value}",
   }}`
   // Passing object to postProfileData
   postProfileData(profileData)
   formContainer.classList.add("hidden")
   confirmMessage.classList.add("active")
-  confirmMessage.classList.remove("confirm-message")
+  confirmMessage.classList.toggle("confirm-message")
 }
 
 // Post request to Klaviyo identify API per the docs. Sending profileData as parameter from createProfile function
@@ -36,12 +43,23 @@ function postProfileData(profileData) {
       data: profileData,
     }),
   }
-
   fetch("https://a.klaviyo.com/api/identify", options)
     .then((response) => response.json())
     .then((response) => console.log(response))
     .catch((error) => console.error(error))
 }
 
-// EVENT LISTENERS -  Calling createProfile on click.
+
+// Swapping the value of the opt in property if checkbox is checked.
+function swapOptValue(e) {
+  e.preventDefault()
+  if (opt.checked) {
+    opt.setAttribute("value", "1")
+  } else {
+    opt.setAttribute("value", "0")
+  }
+}
+
+// EVENT LISTENERS 
 btn.addEventListener("click", createProfile)
+opt.addEventListener("change", swapOptValue)

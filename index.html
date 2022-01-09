@@ -16,7 +16,7 @@
       </h3>
     </div>
     <div class="form-container">
-      <h2>Sign up for Daily Email and SMS alerts!</h2>
+      <h2>Buy Lift Tickets</h2>
       <form action="">
         <label for="email">Email</label>
         <input type="text" id="email" name="email" />
@@ -24,8 +24,17 @@
         <input type="text" id="phone" name="phone" />
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" />
-
-        <button id="btn">Submit</button>
+        <label for="qty">Number of Tickets</label>
+        <input type="number" id="qty" name="qty" min="1" />
+        <label for="day">Day</label>
+        <input type="date" id="day" name="day" />
+        <div class="opt-container">
+          <label for="opt">Daily Weather Updates</label>
+          <!-- <input type="checkbox" id="opt" name="opt" /> -->
+          <!-- <input name="opt" id="opt" type="hidden" value="0" /> -->
+          <input name="opt" id="opt" type="checkbox" value="0" />
+        </div>
+        <button id="btn">Buy Now</button>
       </form>
     </div>
     <script src="./profiles.js"></script>
